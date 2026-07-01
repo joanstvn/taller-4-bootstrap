@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Taller 4</title>
+  <meta name="description" content="Proyecto final Taller 4 - Joan Stiven Rios Valderrama. Recuperación de contraseña Roamly." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+</head>
+<body class="min-vh-100 d-flex flex-column">
+
+  <a class="visually-hidden focusable position-absolute start-0 bg-warning text-dark p-2 z-3 fw-bold" href="#main-content">Saltar al contenido principal</a>
+
+  <header>
+    <nav class="navbar navbar-dark bg-dark py-2" role="navigation" aria-label="Navegación de recuperación">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold fs-3 d-flex align-items-center gap-2" href="../index.html" aria-label="Roamly – Inicio">
+          <img src="../assets/img/logo.svg" alt="Roamly" width="130" height="32" loading="eager" />
+        </a>
+        <a href="login.html" class="btn btn-warning rounded-pill fw-semibold px-3">
+          <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Volver
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="flex-grow-1 d-flex align-items-center justify-content-center py-5" tabindex="-1">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+
+
+
+          <div class="card shadow-lg rounded-4 overflow-hidden">
+
+            <div class="bg-warning text-dark text-center py-4 px-4">
+              <img src="../assets/img/logo.svg" alt="Roamly" width="120" height="30" loading="eager" class="mb-3" />
+              <h1 class="h4 fw-bold mb-0">¿Olvidaste tu contraseña?</h1>
+              <p class="small mb-0 opacity-75">Te enviamos un enlace de recuperación</p>
+            </div>
+
+            <div class="card-body p-4">
+
+              <ol class="d-flex justify-content-center align-items-center gap-2 mb-4 list-unstyled" aria-label="Pasos del proceso de recuperación">
+                <li class="d-flex flex-column align-items-center">
+                  <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center fw-bold p-2" aria-current="step">1</div>
+                  <small class="text-muted mt-1 text-center small">Ingresa<br>correo</small>
+                </li>
+                <li class="border-top border-2 flex-grow-1 mb-4" aria-hidden="true"></li>
+                <li class="d-flex flex-column align-items-center">
+                  <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center fw-bold p-2">2</div>
+                  <small class="text-muted mt-1 text-center small">Revisa<br>correo</small>
+                </li>
+                <li class="border-top border-2 flex-grow-1 mb-4" aria-hidden="true"></li>
+                <li class="d-flex flex-column align-items-center">
+                  <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center fw-bold p-2">3</div>
+                  <small class="text-muted mt-1 text-center small">Nueva<br>contraseña</small>
+                </li>
+              </ol>
+
+              <form method="post" action="#" novalidate aria-label="Formulario de recuperación de contraseña">
+
+                <div class="mb-1">
+                  <div class="form-floating">
+                    <input type="email" class="form-control is-invalid" id="input-email-invalid" name="email_invalid" placeholder="nombre@email.com" value="usuario@lorem.com" autocomplete="email" aria-describedby="email-invalid-feedback" aria-invalid="true" />
+                    <label for="input-email-invalid"><i class="bi bi-envelope me-1" aria-hidden="true"></i>Correo (ejemplo: error)</label>
+                    <div id="email-invalid-feedback" class="invalid-feedback">
+                      <i class="bi bi-x-circle me-1" aria-hidden="true"></i>Este correo no está registrado en Roamly.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4 mt-3">
+                  <div class="form-floating">
+                    <input type="email" class="form-control is-valid" id="input-email-valid" name="email_valid" placeholder="nombre@email.com" value="lorem@ipsum.com" autocomplete="off" aria-describedby="email-valid-feedback" aria-invalid="false" />
+                    <label for="input-email-valid"><i class="bi bi-envelope me-1" aria-hidden="true"></i>Correo (ejemplo: válido)</label>
+                    <div id="email-valid-feedback" class="valid-feedback">
+                      <i class="bi bi-check-circle me-1" aria-hidden="true"></i>¡Correo encontrado! Revisa tu bandeja de entrada.
+                    </div>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-warning rounded-pill w-100 fw-bold py-2 mb-3">
+                  <i class="bi bi-send me-2" aria-hidden="true"></i>Enviar enlace de recuperación
+                </button>
+
+                <a href="login.html" class="btn btn-dark rounded-pill w-100">
+                  <i class="bi bi-arrow-left me-2" aria-hidden="true"></i>Volver al inicio de sesión
+                </a>
+              </form>
+            </div>
+
+          </div>
+
+          <p class="text-center small mt-4 text-dark-emphasis">
+            <i class="bi bi-shield-lock me-1 text-warning" aria-hidden="true"></i>El enlace de recuperación expira en 30 minutos por tu seguridad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
