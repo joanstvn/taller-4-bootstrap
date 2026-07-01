@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Taller 4</title>
+  <meta name="description" content="Proyecto final Taller 4 - Joan Stiven Rios Valderrama. Panel de cliente Roamly." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body class="bg-light">
+
+  <a class="visually-hidden focusable position-absolute start-0 bg-warning text-dark p-2 z-3 fw-bold" href="#main-content">Saltar al contenido principal</a>
+
+  <div class="container-fluid g-0">
+    <div class="row g-0 bg-dark">
+
+      <!-- MOBILE TOGGLE -->
+      <button class="btn btn-outline-secondary rounded-pill btn-sm position-fixed top-0 start-0 m-3 z-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar-client" aria-controls="sidebar-client" aria-label="Abrir menú lateral">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+
+      <!-- SIDEBAR DESKTOP -->
+      <nav class="col-lg-1 d-none d-lg-flex flex-column bg-dark vh-100 position-sticky top-0 p-0 pe-1 pb-5 overflow-hidden" aria-label="Menú lateral del cliente">
+        <div class="py-3">
+          <a href="../index.html" class="d-flex align-items-center text-decoration-none justify-content-start w-100">
+            <img src="../assets/img/logo.svg" alt="Roamly" width="80%" height="auto" style="max-width: 100%;" loading="eager" />
+          </a>
+        </div>
+        <ul class="nav flex-column flex-grow-1" role="list">
+          <li role="listitem"><a href="#" class="nav-link active bg-warning text-dark rounded-end-pill py-2 fw-semibold w-100" aria-current="page"><i class="bi bi-person-circle me-2" aria-hidden="true"></i>Mi Panel</a></li>
+        </ul>
+        <a href="../index.html" class="nav-link active bg-danger text-white rounded-end-pill py-2 fw-semibold w-100"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Salir</a>
+      </nav>
+
+      <!-- SIDEBAR MOBILE -->
+      <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar-client" aria-labelledby="sidebar-client-label">
+        <div class="offcanvas-header border-bottom border-secondary">
+          <h2 class="offcanvas-title h6 fw-bold text-warning" id="sidebar-client-label">
+            <img src="../assets/img/logo.svg" alt="Mi Panel – Roamly" width="80" height="20" loading="lazy" />
+          </h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar menú lateral"></button>
+        </div>
+        <div class="offcanvas-body p-2">
+          <ul class="nav flex-column" role="list">
+            <li role="listitem"><a href="#" class="nav-link active bg-warning text-dark rounded-end-pill py-2 mb-1 w-100" aria-current="page"><i class="bi bi-person-circle me-2" aria-hidden="true"></i>Mi Panel</a></li>
+            <li role="listitem"><a href="login.html" class="nav-link active bg-danger text-white rounded-end-pill py-2 w-100"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Salir</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <main id="main-content" class="col-lg-11 ms-auto p-3 p-md-4 vh-100 overflow-auto rounded-5 bg-body-tertiary" tabindex="-1" aria-label="Contenido del panel de cliente">
+
+      <!-- USER PROFILE -->
+      <section aria-labelledby="profile-heading" class="mb-4">
+        <div class="card shadow-sm rounded-4 overflow-hidden border-0">
+          <div class="bg-dark text-white p-4">
+            <div class="row align-items-center g-3">
+              <div class="col-auto">
+                <div class="position-relative d-inline-block">
+                  <img src="https://placehold.co/90x90/343a40/adb5bd?text=VC" class="rounded-circle border border-4 border-warning" width="90" height="90" alt="Avatar usuario" loading="lazy" />
+                  <span class="position-absolute bottom-0 end-0 bg-success rounded-circle border border-2 border-dark p-2" title="En línea"><span class="visually-hidden">En línea</span></span>
+                </div>
+              </div>
+              <div class="col">
+                <h1 id="profile-heading" class="h4 fw-bold mb-1 text-white">Lorem Ipsum</h1>
+                <p class="mb-2 small text-light"><i class="bi bi-geo-alt me-1 text-warning" aria-hidden="true"></i>Ciudad Lorem, País</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge fw-semibold bg-warning text-dark"><i class="bi bi-trophy me-1" aria-hidden="true"></i>Aventurera Avanzada</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-auto">
+                <dl class="d-flex gap-4 text-center mb-0">
+                  <div>
+                    <dt class="h5 fw-bold mb-0 text-warning">8</dt>
+                    <dd class="small mb-0 text-light">Expediciones</dd>
+                  </div>
+                  <div>
+                    <dt class="h5 fw-bold mb-0 text-warning">3</dt>
+                    <dd class="small mb-0 text-light">Países</dd>
+                  </div>
+                  <div>
+                    <dt class="h5 fw-bold mb-0 text-warning">4.9</dt>
+                    <dd class="small mb-0 text-light">Rating</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 bg-white border-top">
+            <dl class="row g-2 text-center mb-0">
+              <div class="col-6 col-md-3">
+                <dt class="small text-muted fw-normal">Correo</dt>
+                <dd class="small fw-semibold mb-0"><a href="mailto:lorem@ipsum.com" class="text-decoration-none text-dark">lorem@ipsum.com</a></dd>
+              </div>
+              <div class="col-6 col-md-3">
+                <dt class="small text-muted fw-normal">Teléfono</dt>
+                <dd class="small fw-semibold mb-0"><a href="tel:+000000000000" class="text-decoration-none text-dark">+00 000 000 0000</a></dd>
+              </div>
+              <div class="col-6 col-md-3">
+                <dt class="small text-muted fw-normal">Nivel</dt>
+                <dd class="small fw-semibold mb-0 text-warning-emphasis">Avanzado</dd>
+              </div>
+              <div class="col-6 col-md-3">
+                <dt class="small text-muted fw-normal">Puntos Roamly</dt>
+                <dd class="small fw-semibold mb-0 text-success">2,480 pts</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKINGS TABS -->
+      <section aria-labelledby="bookings-heading">
+        <div class="card shadow-sm rounded-4 overflow-hidden mb-4 border-0">
+          <div class="card-header bg-white border-0 pt-4 px-4 pb-0">
+            <h2 id="bookings-heading" class="h5 fw-bold mb-3">
+              <i class="bi bi-calendar2-check me-2 text-warning-emphasis" aria-hidden="true"></i>Mis Inscripciones
+            </h2>
+            <ul class="nav nav-pills gap-2" id="bookings-tabs" role="tablist" aria-label="Filtrar inscripciones">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active fw-semibold" id="tab-active-bookings" data-bs-toggle="tab" data-bs-target="#panel-active-bookings" type="button" role="tab" aria-controls="panel-active-bookings" aria-selected="true">
+                  <i class="bi bi-lightning me-1" aria-hidden="true"></i>Activas
+                  <span class="badge ms-1 bg-warning text-dark" aria-label="3 inscripciones activas">3</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link fw-semibold text-secondary" id="tab-history" data-bs-toggle="tab" data-bs-target="#panel-history" type="button" role="tab" aria-controls="panel-history" aria-selected="false">
+                  <i class="bi bi-clock-history me-1" aria-hidden="true"></i>Historial
+                  <span class="badge bg-secondary rounded-pill ms-1" aria-label="5 expediciones en historial">5</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body p-4">
+            <div class="tab-content" id="bookings-tab-content">
+
+              <!-- TAB: Active bookings -->
+              <div class="tab-pane fade show active" id="panel-active-bookings" role="tabpanel" aria-labelledby="tab-active-bookings" tabindex="0">
+                <div class="row g-3">
+
+                  <div class="col-12">
+                    <article class="card border-0 rounded-4 shadow-sm" aria-label="Reserva: Expedición Lorem Ipsum">
+                      <div class="card-body p-3">
+                        <div class="row align-items-center g-2">
+                          <div class="col-auto">
+                            <img src="https://placehold.co/70x70/dee2e6/6c757d?text=Img" class="rounded-pill object-fit-cover" width="70" height="70" alt="Imagen de expedición" loading="lazy" />
+                          </div>
+                          <div class="col">
+                            <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                              <h3 class="h6 fw-bold mb-0">Expedición Lorem Ipsum</h3>
+                              <span class="badge bg-success rounded-pill">Confirmada</span>
+                            </div>
+                            <p class="text-muted small mb-1"><i class="bi bi-calendar me-1" aria-hidden="true"></i><time datetime="2025-06-20">20</time>–<time datetime="2025-06-26">26 Jun 2025</time></p>
+                            <p class="text-muted small mb-0"><i class="bi bi-people me-1" aria-hidden="true"></i>Grupo de 10 personas</p>
+                          </div>
+                          <div class="col-auto text-end">
+                            <p class="fw-bold text-warning-emphasis mb-1">$1,200,000</p>
+                            <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle rounded-pill small">
+                              <i class="bi bi-check-circle me-1" aria-hidden="true"></i>Pagado
+                            </span>
+                            <div class="mt-2">
+                              <button class="btn btn-sm btn-outline-secondary rounded-pill" aria-label="Descargar comprobante de Expedición Lorem Ipsum">
+                                <i class="bi bi-file-pdf me-1" aria-hidden="true"></i>Comprobante
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="col-12">
+                    <article class="card border-0 rounded-4 shadow-sm" aria-label="Reserva: Actividad Dolor Sit">
+                      <div class="card-body p-3">
+                        <div class="row align-items-center g-2">
+                          <div class="col-auto">
+                            <img src="https://placehold.co/70x70/dee2e6/6c757d?text=Img" class="rounded-pill object-fit-cover" width="70" height="70" alt="Imagen de actividad" loading="lazy" />
+                          </div>
+                          <div class="col">
+                            <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                              <h3 class="h6 fw-bold mb-0">Actividad Dolor Sit</h3>
+                              <span class="badge bg-danger rounded-pill">Pendiente pago</span>
+                            </div>
+                            <p class="text-muted small mb-1"><i class="bi bi-calendar me-1" aria-hidden="true"></i><time datetime="2025-07-05">5 Jul 2025</time></p>
+                            <p class="text-muted small mb-0"><i class="bi bi-person me-1" aria-hidden="true"></i>Individual</p>
+                          </div>
+                          <div class="col-auto text-end">
+                            <p class="fw-bold mb-1 text-warning-emphasis">$280,000</p>
+                            <span class="badge bg-warning-subtle border border-warning-subtle rounded-pill small text-warning-emphasis">
+                              <i class="bi bi-clock me-1" aria-hidden="true"></i>Pendiente
+                            </span>
+                            <div class="mt-2">
+                              <button class="btn btn-sm btn-warning rounded-pill fw-semibold" aria-label="Pagar reserva de Actividad Dolor Sit">
+                                <i class="bi bi-credit-card me-1" aria-hidden="true"></i>Pagar
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="col-12">
+                    <article class="card border-0 rounded-4 shadow-sm" aria-label="Reserva: Expedición Amet Elit">
+                      <div class="card-body p-3">
+                        <div class="row align-items-center g-2">
+                          <div class="col-auto">
+                            <img src="https://placehold.co/70x70/dee2e6/6c757d?text=Img" class="rounded-pill object-fit-cover" width="70" height="70" alt="Imagen de expedición" loading="lazy" />
+                          </div>
+                          <div class="col">
+                            <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                              <h3 class="h6 fw-bold mb-0">Expedición Amet Elit</h3>
+                              <span class="badge bg-info text-dark rounded-pill">En revisión</span>
+                            </div>
+                            <p class="text-muted small mb-1"><i class="bi bi-calendar me-1" aria-hidden="true"></i><time datetime="2025-08-15">15</time>–<time datetime="2025-08-19">19 Ago 2025</time></p>
+                            <p class="text-muted small mb-0"><i class="bi bi-people me-1" aria-hidden="true"></i>Grupo de 8 personas</p>
+                          </div>
+                          <div class="col-auto text-end">
+                            <p class="fw-bold mb-1">$850,000</p>
+                            <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle rounded-pill small">
+                              <i class="bi bi-hourglass-split me-1" aria-hidden="true"></i>En revisión
+                            </span>
+                            <div class="mt-2">
+                              <button class="btn btn-sm btn-outline-secondary rounded-pill" aria-label="Ver detalles de Expedición Amet Elit">
+                                <i class="bi bi-eye me-1" aria-hidden="true"></i>Ver detalles
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB: History -->
+              <div class="tab-pane fade" id="panel-history" role="tabpanel" aria-labelledby="tab-history" tabindex="0">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <article class="card border-0 rounded-4 shadow-sm bg-light" aria-label="Expedición completada: Ruta Consectetur">
+                      <div class="card-body p-3">
+                        <div class="row align-items-center g-2">
+                          <div class="col-auto">
+                            <img src="https://placehold.co/70x70/dee2e6/6c757d?text=Img" class="rounded-pill object-fit-cover opacity-75" width="70" height="70" alt="Imagen de ruta" loading="lazy" />
+                          </div>
+                          <div class="col">
+                            <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                              <h3 class="h6 fw-bold mb-0 text-muted">Ruta Consectetur</h3>
+                              <span class="badge bg-secondary rounded-pill">Completada</span>
+                            </div>
+                            <p class="text-muted small mb-0"><i class="bi bi-calendar me-1" aria-hidden="true"></i><time datetime="2025-03-10">10</time>–<time datetime="2025-03-13">13 Mar 2025</time></p>
+                          </div>
+                          <div class="col-auto text-end">
+                            <p class="text-muted mb-1">$680,000</p>
+                            <div class="text-warning small" aria-label="Calificación: 5 de 5 estrellas">
+                              <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                            </div>
+                            <button class="btn btn-sm btn-outline-warning rounded-pill mt-1 border-warning text-warning-emphasis" aria-label="Volver a reservar Ruta Consectetur">
+                              <i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>Reservar de nuevo
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-12">
+                    <article class="card border-0 rounded-4 shadow-sm bg-light" aria-label="Expedición completada: Ruta Adipiscing">
+                      <div class="card-body p-3">
+                        <div class="row align-items-center g-2">
+                          <div class="col-auto">
+                            <img src="https://placehold.co/70x70/dee2e6/6c757d?text=Img" class="rounded-pill object-fit-cover opacity-75" width="70" height="70" alt="Imagen de ruta" loading="lazy" />
+                          </div>
+                          <div class="col">
+                            <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                              <h3 class="h6 fw-bold mb-0 text-muted">Ruta Adipiscing</h3>
+                              <span class="badge bg-secondary rounded-pill">Completada</span>
+                            </div>
+                            <p class="text-muted small mb-0"><i class="bi bi-calendar me-1" aria-hidden="true"></i><time datetime="2025-01-02">2</time>–<time datetime="2025-01-04">4 Ene 2025</time></p>
+                          </div>
+                          <div class="col-auto text-end">
+                            <p class="text-muted mb-1">$490,000</p>
+                            <div class="text-warning small" aria-label="Calificación: 4.5 de 5 estrellas">
+                              <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-half" aria-hidden="true"></i>
+                            </div>
+                            <button class="btn btn-sm btn-outline-warning rounded-pill mt-1 border-warning text-warning-emphasis" aria-label="Volver a reservar Ruta Adipiscing">
+                              <i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>Reservar de nuevo
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
